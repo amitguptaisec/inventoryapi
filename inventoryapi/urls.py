@@ -18,10 +18,11 @@ from django.contrib import admin
 from django.urls import path
 
 from loginM.login_master import CustomAuthToken
-from loginM.views import loginCheck
+# from loginM.views import loginCheck
 from inventorycrud.views import get_inventoryList,get_StockoutList
 from inventorycrud.add_inventory import add_inventory
 from inventorycrud.add_stockout import add_stockout
+from categoryM.views import get_CategoryList
 
 
 urlpatterns = [
@@ -33,4 +34,5 @@ urlpatterns = [
     path('api/GetStockoutList/', get_StockoutList),
     path('api/AddInventory/', add_inventory),
     path('api/AddStockout/', add_stockout),
+    path('api/GetCategoryList/', get_CategoryList),
 ]
